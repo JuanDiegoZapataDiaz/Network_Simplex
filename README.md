@@ -53,6 +53,20 @@ result = NetworkSimplex(network).solve(warm_start=warm_start)
 Si el resultado termina con una base compuesta solo por arcos originales,
 `result.as_warm_start()` lo convierte directamente en un nuevo `WarmStart`.
 
+## Comparacion con NetworkX
+
+El ejemplo `examples/compare_with_networkx.py` resuelve la misma instancia con
+esta libreria y con `networkx.network_simplex`, y verifica coste y flujos. Para
+ejecutarlo:
+
+```bash
+python -m pip install -e ".[examples]"
+python examples/compare_with_networkx.py
+```
+
+NetworkX usa `incoming - outgoing = demand`; por eso el ejemplo convierte cada
+balance con `demand = -balance`.
+
 ## Alcance actual
 
 - Flujos no negativos y sin cotas superiores.

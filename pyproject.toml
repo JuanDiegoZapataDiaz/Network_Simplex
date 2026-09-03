@@ -8,6 +8,9 @@ version = "0.1.0"
 description = "Educational implementation of the uncapacitated minimum-cost flow problem using Network Simplex."
 requires-python = ">=3.10"
 
+[project.optional-dependencies]
+examples = ["networkx>=3.0"]
+
 [tool.setuptools.packages.find]
 where = ["src"]
 
