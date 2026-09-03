@@ -3,11 +3,11 @@
 An educational Python implementation of the **primal Network Simplex**
 algorithm for the uncapacitated minimum-cost flow problem:
 
-\[
+$\[
 \min c^\top x
 \quad \text{subject to} \quad
 Ax=b,\; x\geq0,
-\]
+\]$
 
 where \(A\) is the node-arc incidence matrix of a directed network.
 
@@ -15,16 +15,16 @@ where \(A\) is the node-arc incidence matrix of a directed network.
 
 This project uses the following node-balance convention:
 
-\[
+$\[
 \text{outgoing flow} - \text{incoming flow} = b_i.
-\]
+\]$
 
 Therefore, a positive balance represents supply and a negative balance
 represents demand.
 
 ## Features
 
-- Uncapacitated minimum-cost flow: \(x_{ij}\geq0\).
+- Uncapacitated minimum-cost flow: $\(x_{ij}\geq0\)$.
 - Big-M artificial-root initialization to obtain an initial basic feasible
   solution or detect infeasibility.
 - Spanning-tree basis, node potentials, reduced costs, fundamental cycles, and
@@ -107,11 +107,11 @@ with `demand = -balance`.
 
 This is an educational implementation rather than a production solver. The
 current scope is limited to nonnegative, uncapacitated arc flows. In particular,
-upper bounds \(x_{ij}\leq u_{ij}\), integer-specialized data structures, and a
+upper bounds $\(x_{ij}\leq u_{ij}\)$, integer-specialized data structures, and a
 separate numerical Phase I procedure are not implemented yet.
 
 The natural next extension is the capacitated model:
 
-\[
+$\[
 0\leq x_{ij}\leq u_{ij}.
-\]
+\]$
