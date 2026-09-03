@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: network-simplex
+Version: 0.1.0
+Summary: Educational implementation of the uncapacitated minimum-cost flow problem using Network Simplex.
+Requires-Python: >=3.10
